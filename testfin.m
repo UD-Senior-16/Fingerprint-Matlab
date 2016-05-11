@@ -23,12 +23,12 @@
 function [newim, binim, mask, reliability] =  testfin(im)
     
     if nargin == 0
-    im = imread('Layer1_2.JPG');
+    im = imread('Sean_B5.JPG');
     im = im2uint8(rgb2gray(im));
     end
     
     % Identify ridge-like regions and normalise image
-    blksze = 128; thresh = 0.01;
+    blksze = 32; thresh = 0.09;
     [normim, mask] = ridgesegment(im, blksze, thresh);
     %show(normim,1);
     
